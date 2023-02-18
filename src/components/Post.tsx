@@ -7,11 +7,12 @@ export default function Post() {
   const [postTitle, setPostTitle] = useState<string | null>("");
  
   const changeTitle = () => {
-    setPostTitle(null)
+    setPostTitle('Ridho ganteng')
   }
 
   return(
       <div>
+        <h2>Ray</h2>
         <h1>{postTitle}</h1>
         </div>
 
