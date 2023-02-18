@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import Posting from "./Posting";
 
 // spesikan data 1-1
 type PostProps = {
@@ -21,6 +21,7 @@ async function getPosts(): Promise<PostProps> {
 }
 
 export default async function Data() {
+   
   const datas = await getPosts()
 
   return (
@@ -28,8 +29,8 @@ export default async function Data() {
         {
             datas.map((dataa) => {
                return(
-                   <p key={dataa.id}>{dataa.body}</p>                   
-                )
+                    <p>{dataa.title}</p>
+               )
             })
         }
       {/* <p>{data.title}</p> */}
